@@ -5,10 +5,10 @@ resource "aws_instance" "demo-server"{
     ami = "ami-0bb84b8ffd87024d8"
     instance_type = "t2.micro"
     key_name = "Mykeypair"
-    security_groups=["demo-sg"]
+    security_groups=[ "demo-sg1" ]
 }
-resource "aws_security_group" "demo-sg"{
-    name = "demo-sg"
+resource "aws_security_group" "demo-sg1" {
+    name = "demo-sg1"
     description ="SSH Access"
     ingress {
         description ="shh access"
